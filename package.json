@@ -1,0 +1,32 @@
+{
+  "name": "storybook-gh-pages",
+  "version": "1.0.0",
+  "description": "A storybook that deploys to the `gh-pages` folder",
+  "scripts": {
+    "storybook": "start-storybook -p 9009",
+    "build-storybook": "build-storybook",
+    "predeploy": "npm run build-storybook",
+    "deploy": "push-dir --dir=storybook-static --branch=gh-pages --cleanup"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hipstersmoothie/gh-pages-workshop.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hipstersmoothie/gh-pages-workshop/issues"
+  },
+  "homepage": "https://github.com/hipstersmoothie/gh-pages-workshop#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.4.4",
+    "@storybook/addon-actions": "^5.0.11",
+    "@storybook/addon-links": "^5.0.11",
+    "@storybook/addons": "^5.0.11",
+    "@storybook/react": "^5.0.11",
+    "babel-loader": "^8.0.5",
+    "push-dir": "^0.4.1"
+  }
+}
