@@ -1,0 +1,32 @@
+{
+  "name": "personal-gh-pages",
+  "version": "1.0.0",
+  "description": "A personal website that publishes to a `USERNAME.github.io` repo (only public github)",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "export": "npm run build && next export",
+    "predeploy": "npm run export && touch out/.nojekyll",
+    "deploy": "push-dir --dir=out --branch=master --cleanup --remote=github-io"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hipstersmoothie/gh-pages-workshop.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hipstersmoothie/gh-pages-workshop/issues"
+  },
+  "homepage": "https://github.com/hipstersmoothie/gh-pages-workshop#readme",
+  "dependencies": {
+    "next": "^8.1.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  },
+  "devDependencies": {
+    "push-dir": "^0.4.1"
+  }
+}
